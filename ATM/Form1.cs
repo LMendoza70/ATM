@@ -32,12 +32,55 @@ namespace ATM
         {
             if(txtCantidad.Text != "")
             {
-
-                cuenta.Deposito(float.Parse(txtCantidad.Text));
-                txtSaldo.Text = "$ " + cuenta.Saldo;
-                txtCantidad.Text = "";
-
+                try
+                {
+                    cuenta.Deposito(float.Parse(txtCantidad.Text));
+                    txtSaldo.Text = "$ " + cuenta.Saldo;
+                    txtCantidad.Text = "";
+                }
+                catch
+                {
+                    MessageBox.Show("Datos capturados no validos");
+                    txtCantidad.Text = "";
+                }
             }
+        }
+
+        private void txtCantidad_Enter(object sender, EventArgs e)
+        {
+            txtCantidad.Text = "";
+        }
+
+        private void txtCantidad_Leave(object sender, EventArgs e)
+        {
+            if (txtCantidad.Text == "")
+            {
+                txtCantidad.Text = "solo numeros";
+            }
+        }
+
+        private void btnRetiro_Click(object sender, EventArgs e)
+        {
+            if (txtCantidad.Text!="")
+            {
+                try
+                {
+                    cuenta.Retiro(float.Parse(txtCantidad.Text));
+                    txtCantidad.Text = "";
+                    txtSaldo.Text = "$ " + cuenta.Saldo;
+                }
+                catch
+                {
+                    MessageBox.Show("Datos capturados no validos");
+                    txtCantidad.Text = "";
+                }
+               
+            }
+        }
+
+        private void btnEstado_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(cuenta.Estado());
         }
     }
 }

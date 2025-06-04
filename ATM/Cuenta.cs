@@ -41,7 +41,7 @@ namespace ATM
         abstract public bool Retiro(float cantidad);
         public string Estado()
         {
-            return "La cuenta : "+numCuenta+" pertenece a : "+nombre+" y tiene : $"+saldo;
+            return "La cuenta : "+numCuenta+" \npertenece a : "+nombre+"  \ntiene : $"+saldo;
         }
     }
 }

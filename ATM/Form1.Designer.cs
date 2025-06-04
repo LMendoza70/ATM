@@ -57,6 +57,7 @@ namespace ATM
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(364, 22);
             this.txtNombre.TabIndex = 1;
+            this.txtNombre.Tag = "hola";
             // 
             // lblCuenta
             // 
@@ -107,6 +108,10 @@ namespace ATM
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(364, 22);
             this.txtCantidad.TabIndex = 7;
+            this.txtCantidad.Tag = "";
+            this.txtCantidad.Text = "Solo numeros";
+            this.txtCantidad.Enter += new System.EventHandler(this.txtCantidad_Enter);
+            this.txtCantidad.Leave += new System.EventHandler(this.txtCantidad_Leave);
             // 
             // btnDesposito
             // 
@@ -126,6 +131,7 @@ namespace ATM
             this.btnRetiro.TabIndex = 9;
             this.btnRetiro.Text = "Retiro";
             this.btnRetiro.UseVisualStyleBackColor = true;
+            this.btnRetiro.Click += new System.EventHandler(this.btnRetiro_Click);
             // 
             // btnEstado
             // 
@@ -135,6 +141,7 @@ namespace ATM
             this.btnEstado.TabIndex = 10;
             this.btnEstado.Text = "Estado";
             this.btnEstado.UseVisualStyleBackColor = true;
+            this.btnEstado.Click += new System.EventHandler(this.btnEstado_Click);
             // 
             // Form1
             // 
