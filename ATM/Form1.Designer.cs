@@ -45,79 +45,90 @@ namespace ATM
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(25, 36);
+            this.lblNombre.Location = new System.Drawing.Point(19, 29);
+            this.lblNombre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(154, 17);
+            this.lblNombre.Size = new System.Drawing.Size(135, 15);
             this.lblNombre.TabIndex = 0;
             this.lblNombre.Text = "Nombre del Propietario";
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(28, 79);
+            this.txtNombre.Location = new System.Drawing.Point(21, 64);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(364, 22);
+            this.txtNombre.Size = new System.Drawing.Size(274, 20);
             this.txtNombre.TabIndex = 1;
             this.txtNombre.Tag = "hola";
             // 
             // lblCuenta
             // 
             this.lblCuenta.AutoSize = true;
-            this.lblCuenta.Location = new System.Drawing.Point(25, 147);
+            this.lblCuenta.Location = new System.Drawing.Point(19, 119);
+            this.lblCuenta.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCuenta.Name = "lblCuenta";
-            this.lblCuenta.Size = new System.Drawing.Size(127, 17);
+            this.lblCuenta.Size = new System.Drawing.Size(111, 15);
             this.lblCuenta.TabIndex = 2;
             this.lblCuenta.Text = "Numero de Cuenta";
             // 
             // txtNumCuenta
             // 
-            this.txtNumCuenta.Location = new System.Drawing.Point(28, 188);
+            this.txtNumCuenta.Location = new System.Drawing.Point(21, 153);
+            this.txtNumCuenta.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtNumCuenta.MaxLength = 10;
             this.txtNumCuenta.Name = "txtNumCuenta";
-            this.txtNumCuenta.Size = new System.Drawing.Size(364, 22);
+            this.txtNumCuenta.Size = new System.Drawing.Size(274, 20);
             this.txtNumCuenta.TabIndex = 3;
             // 
             // lblSaldo
             // 
             this.lblSaldo.AutoSize = true;
-            this.lblSaldo.Location = new System.Drawing.Point(25, 262);
+            this.lblSaldo.Location = new System.Drawing.Point(19, 213);
+            this.lblSaldo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSaldo.Name = "lblSaldo";
-            this.lblSaldo.Size = new System.Drawing.Size(118, 17);
+            this.lblSaldo.Size = new System.Drawing.Size(104, 15);
             this.lblSaldo.TabIndex = 4;
             this.lblSaldo.Text = "Saldo Disponible ";
             // 
             // txtSaldo
             // 
             this.txtSaldo.Enabled = false;
-            this.txtSaldo.Location = new System.Drawing.Point(28, 323);
+            this.txtSaldo.Location = new System.Drawing.Point(21, 262);
+            this.txtSaldo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtSaldo.Name = "txtSaldo";
-            this.txtSaldo.Size = new System.Drawing.Size(364, 22);
+            this.txtSaldo.Size = new System.Drawing.Size(274, 20);
             this.txtSaldo.TabIndex = 5;
             // 
             // lblCantidad
             // 
             this.lblCantidad.AutoSize = true;
-            this.lblCantidad.Location = new System.Drawing.Point(31, 429);
+            this.lblCantidad.Location = new System.Drawing.Point(23, 349);
+            this.lblCantidad.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCantidad.Name = "lblCantidad";
-            this.lblCantidad.Size = new System.Drawing.Size(151, 17);
+            this.lblCantidad.Size = new System.Drawing.Size(131, 15);
             this.lblCantidad.TabIndex = 6;
             this.lblCantidad.Text = "Cantidad de operacion";
             // 
             // txtCantidad
             // 
-            this.txtCantidad.Location = new System.Drawing.Point(28, 482);
+            this.txtCantidad.Location = new System.Drawing.Point(21, 392);
+            this.txtCantidad.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtCantidad.Name = "txtCantidad";
-            this.txtCantidad.Size = new System.Drawing.Size(364, 22);
+            this.txtCantidad.Size = new System.Drawing.Size(274, 20);
             this.txtCantidad.TabIndex = 7;
             this.txtCantidad.Tag = "";
             this.txtCantidad.Text = "Solo numeros";
             this.txtCantidad.Enter += new System.EventHandler(this.txtCantidad_Enter);
+            this.txtCantidad.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCantidad_KeyDown);
+            this.txtCantidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCantidad_KeyPress);
             this.txtCantidad.Leave += new System.EventHandler(this.txtCantidad_Leave);
             // 
             // btnDesposito
             // 
-            this.btnDesposito.Location = new System.Drawing.Point(51, 558);
+            this.btnDesposito.Location = new System.Drawing.Point(38, 453);
+            this.btnDesposito.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnDesposito.Name = "btnDesposito";
-            this.btnDesposito.Size = new System.Drawing.Size(100, 43);
+            this.btnDesposito.Size = new System.Drawing.Size(75, 35);
             this.btnDesposito.TabIndex = 8;
             this.btnDesposito.Text = "Deposito";
             this.btnDesposito.UseVisualStyleBackColor = true;
@@ -125,9 +136,10 @@ namespace ATM
             // 
             // btnRetiro
             // 
-            this.btnRetiro.Location = new System.Drawing.Point(171, 558);
+            this.btnRetiro.Location = new System.Drawing.Point(128, 453);
+            this.btnRetiro.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnRetiro.Name = "btnRetiro";
-            this.btnRetiro.Size = new System.Drawing.Size(93, 43);
+            this.btnRetiro.Size = new System.Drawing.Size(70, 35);
             this.btnRetiro.TabIndex = 9;
             this.btnRetiro.Text = "Retiro";
             this.btnRetiro.UseVisualStyleBackColor = true;
@@ -135,9 +147,10 @@ namespace ATM
             // 
             // btnEstado
             // 
-            this.btnEstado.Location = new System.Drawing.Point(287, 562);
+            this.btnEstado.Location = new System.Drawing.Point(215, 457);
+            this.btnEstado.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnEstado.Name = "btnEstado";
-            this.btnEstado.Size = new System.Drawing.Size(91, 39);
+            this.btnEstado.Size = new System.Drawing.Size(68, 32);
             this.btnEstado.TabIndex = 10;
             this.btnEstado.Text = "Estado";
             this.btnEstado.UseVisualStyleBackColor = true;
@@ -145,9 +158,9 @@ namespace ATM
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(431, 792);
+            this.ClientSize = new System.Drawing.Size(323, 644);
             this.Controls.Add(this.btnEstado);
             this.Controls.Add(this.btnRetiro);
             this.Controls.Add(this.btnDesposito);
@@ -159,6 +172,7 @@ namespace ATM
             this.Controls.Add(this.lblCuenta);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.lblNombre);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form1";
             this.Text = "Cajeto ATM 5A";
             this.Load += new System.EventHandler(this.Form1_Load);

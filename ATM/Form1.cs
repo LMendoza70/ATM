@@ -82,5 +82,21 @@ namespace ATM
         {
             MessageBox.Show(cuenta.Estado());
         }
+
+        private void txtCantidad_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            MessageBox.Show(" ");
+            /*if (!char.IsDigit(e.KeyChar) )
+            {
+                if(e.KeyChar != (char) Keys.Back)
+                    //if(e.KeyChar != '-' || ((TextBox)sender).Text.Length!=0)
+                        e.Handled = true;
+            }*/
+        }
+
+        private void txtCantidad_KeyDown(object sender, KeyEventArgs e)
+        {
+            MessageBox.Show(""+e.KeyCode);
+        }
     }
 }
