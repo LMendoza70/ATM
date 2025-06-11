@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Collections;
 using System.Windows.Forms;
 
 namespace ATM
@@ -25,6 +26,43 @@ namespace ATM
             this.txtNombre.Text = cuenta.Nombre;
             this.txtNumCuenta.Text = cuenta.NumCuenta;
             txtSaldo.Text = "$ " + cuenta.Saldo;
+
+            //trabajo con el combo
+            //creo un arraylist de categorias
+            ArrayList categoria = new ArrayList();
+            //cargamos algunos registros al arraylist
+            categoria.Add(new clsCategoria(1,"Caballero","xxxx"));
+            categoria.Add(new clsCategoria(2, "Damas","dddddd"));
+            categoria.Add(new clsCategoria(3,"Niños","ttttttt"));
+            categoria.Add(new clsCategoria(5, "Accesorios","tttttt"));
+            //asignamos el array como datasource en el combo
+            cmbCategorias.DataSource = categoria;
+            cmbCategorias.DisplayMember = "nombre";
+            cmbCategorias.ValueMember = "id";
+
+            //creo un arraylist de productos
+            ArrayList productos = new ArrayList();
+            //creo 15 registros variados al array de productos 
+            productos.Add(new clsProductos(1,"chamarra",100,10,1));
+            productos.Add(new clsProductos(2, "pantalon",200,20,2));
+            productos.Add(new clsProductos(3,"camisa",300,30,3));
+            productos.Add(new clsProductos(5, "calcetin",400,40,5));
+            productos.Add(new clsProductos(6, "calcetin",400,40,5));
+            productos.Add(new clsProductos(7, "calcetin",400,40,5));
+            productos.Add(new clsProductos(8, "calcetin",400,40,5));
+            productos.Add(new clsProductos(9, "calcetin",400,40,5));
+            productos.Add(new clsProductos(10, "calcetin",400,40,5));
+            productos.Add(new clsProductos(11, "calcetin",400,40,5));
+            productos.Add(new clsProductos(12, "calcetin",400,40,5));
+            productos.Add(new clsProductos(13, "calcetin",400,40,5));
+            productos.Add(new clsProductos(14, "calcetin",400,40,5));
+            productos.Add(new clsProductos(15, "calcetin",400,40,5));
+            //asignamos el array como datasource en el combo
+            cmbCategorias.DataSource = categoria;
+            cmbCategorias.DisplayMember = "nombre";
+            cmbCategorias.ValueMember = "id";
+            //trabajamos con el datagritview
+            dgvCategorias.DataSource = productos;
 
         }
 
@@ -97,6 +135,14 @@ namespace ATM
         private void txtCantidad_KeyDown(object sender, KeyEventArgs e)
         {
             MessageBox.Show(""+e.KeyCode);
+        }
+
+        private void cmbCategorias_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //MessageBox.Show("hola"+cmbCategorias.SelectedIndex);
+            clsCategoria seleccionada = (clsCategoria) cmbCategorias.SelectedItem;
+            txtId.Text = ""+seleccionada.Id;
+            txtCategoria.Text = seleccionada.Nombre;
         }
     }
 }

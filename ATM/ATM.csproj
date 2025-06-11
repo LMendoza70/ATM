@@ -46,6 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="clsCategoria.cs" />
+    <Compile Include="clsProductos.cs" />
     <Compile Include="Cuenta Empresa.cs" />
     <Compile Include="Cuenta.cs" />
     <Compile Include="CuentaFree.cs" />
@@ -91,6 +93,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
