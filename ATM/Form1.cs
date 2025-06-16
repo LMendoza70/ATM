@@ -39,32 +39,28 @@ namespace ATM
             cmbCategorias.DataSource = categoria;
             cmbCategorias.DisplayMember = "nombre";
             cmbCategorias.ValueMember = "id";
+            //lista de cuentas 
+            ArrayList Cuentas = new ArrayList();
+            //creamos algunas cuentas aleatorias
+            Cuentas.Add(new CuentaJR("5436423654852", "Luis Alberto Mendoza", 5000));
+            Cuentas.Add(new CuentaJR("1234567890123", "Juan Perez Gomez", 4500));
+            Cuentas.Add(new CuentaJR("9876543210987", "Maria Lopez Diaz", 3200));
+            Cuentas.Add(new CuentaJR("4567891234567", "Carlos Sanchez Ruiz", 7800));
+            Cuentas.Add(new CuentaJR("7891234567891", "Ana Garcia Torres", 1500));
+            Cuentas.Add(new CuentaJR("3216549873216", "Pedro Martinez Luna", 6200));
+            Cuentas.Add(new CuentaJR("6549873216549", "Sofia Hernandez Cruz", 2900));
+            Cuentas.Add(new CuentaJR("1472583691472", "Luis Gonzalez Vega", 5100));
+            Cuentas.Add(new CuentaJR("2583691472583", "Elena Ramirez Soto", 8700));
+            Cuentas.Add(new CuentaJR("3691472583691", "Miguel Castro Nunez", 4300));
+            Cuentas.Add(new CuentaJR("7418529637418", "Laura Morales Pena", 6600));
+            dgvCategorias.DataSource = Cuentas;
+        
 
-            //creo un arraylist de productos
-            ArrayList productos = new ArrayList();
-            //creo 15 registros variados al array de productos 
-            productos.Add(new clsProductos(1,"chamarra",100,10,1));
-            productos.Add(new clsProductos(2, "pantalon",200,20,2));
-            productos.Add(new clsProductos(3,"camisa",300,30,3));
-            productos.Add(new clsProductos(5, "calcetin",400,40,5));
-            productos.Add(new clsProductos(6, "calcetin",400,40,5));
-            productos.Add(new clsProductos(7, "calcetin",400,40,5));
-            productos.Add(new clsProductos(8, "calcetin",400,40,5));
-            productos.Add(new clsProductos(9, "calcetin",400,40,5));
-            productos.Add(new clsProductos(10, "calcetin",400,40,5));
-            productos.Add(new clsProductos(11, "calcetin",400,40,5));
-            productos.Add(new clsProductos(12, "calcetin",400,40,5));
-            productos.Add(new clsProductos(13, "calcetin",400,40,5));
-            productos.Add(new clsProductos(14, "calcetin",400,40,5));
-            productos.Add(new clsProductos(15, "calcetin",400,40,5));
-            //asignamos el array como datasource en el combo
             cmbCategorias.DataSource = categoria;
             cmbCategorias.DisplayMember = "nombre";
             cmbCategorias.ValueMember = "id";
-            //trabajamos con el datagritview
-            dgvCategorias.DataSource = productos;
 
-        }
+    }
 
         private void btnDesposito_Click(object sender, EventArgs e)
         {
@@ -143,6 +139,61 @@ namespace ATM
             clsCategoria seleccionada = (clsCategoria) cmbCategorias.SelectedItem;
             txtId.Text = ""+seleccionada.Id;
             txtCategoria.Text = seleccionada.Nombre;
+        }
+
+        private void dgvCategorias_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                CuentaJR seleccionado = (CuentaJR)dgvCategorias.Rows[e.RowIndex].DataBoundItem;
+                txtCliente.Text = seleccionado.Nombre;
+                txtCuenta.Text = seleccionado.NumCuenta;
+                txtSaldoG.Text = "$"+seleccionado.Saldo;
+            }
+        }
+
+        private void dgvCategorias_CellEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            CuentaJR seleccionado = (CuentaJR)dgvCategorias.Rows[e.RowIndex].DataBoundItem;
+            txtCliente.Text = seleccionado.Nombre;
+            txtCuenta.Text = seleccionado.NumCuenta;
+            txtSaldoG.Text = "$" + seleccionado.Saldo;
+
+        }
+
+        private void btnIngre_Click(object sender, EventArgs e)
+        {
+            string lista = "Su pizza ";
+            //ifs para la especialidad
+            if (rdbSarten.Checked)
+                lista += "de Sarten ";
+            if (rdbQueso.Checked)
+                lista += "con Orilla rellena de queso ";
+            if (rdbItaliana.Checked)
+                lista += "Italiana ";
+
+            //ifs de los radio solo va a tomar 1 
+            if (rdbIndividual.Checked)
+                lista += "Individual es de \n";
+            if (rdbMediano.Checked)
+                lista += "Mediana es de \n";
+            if (rdbGrande.Checked)
+                lista += "Grande es de \n";
+            
+
+            //ifs de los check puede tomar todos 
+            if (chbPep.Checked)
+                lista = lista + "* Peperoni\n";
+            if (chbPina.Checked)
+                lista += "* Piña\n";
+            if (chbTosino.Checked == true)
+            {
+                lista = lista + "* Tocino\n";
+            }
+            if (chbChamp.Checked)
+                lista += "* Champiñones";
+
+            MessageBox.Show(lista);
         }
     }
 }

@@ -17,6 +17,13 @@ namespace ATM
             nombre = "Cuenta JR";
         }
 
+        public CuentaJR(string num,string nom, float sal)
+        {
+            nombre = nom;
+            numCuenta = num;
+            saldo = sal;
+        }
+
         //metodos reescritos
         public override bool Deposito(float cantidad)
         {
