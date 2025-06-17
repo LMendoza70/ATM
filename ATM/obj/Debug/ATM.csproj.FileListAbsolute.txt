@@ -9,3 +9,4 @@ D:\2025-2\Practicas\ATM\ATM\obj\Debug\ATM.exe
 D:\2025-2\Practicas\ATM\ATM\obj\Debug\ATM.pdb
 D:\2025-2\Practicas\ATM\ATM\obj\Debug\ATM.Form1.resources
 D:\2025-2\Practicas\ATM\ATM\obj\Debug\ATM.frmCuentaEmpresa.resources
+D:\2025-2\Practicas\ATM\ATM\obj\Debug\ATM.frmPrincipal.resources

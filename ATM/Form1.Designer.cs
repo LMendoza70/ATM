@@ -53,19 +53,19 @@ namespace ATM
             this.txtCuenta = new System.Windows.Forms.TextBox();
             this.txtSaldoG = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.chbPep = new System.Windows.Forms.CheckBox();
-            this.chbChamp = new System.Windows.Forms.CheckBox();
-            this.chbPina = new System.Windows.Forms.CheckBox();
             this.chbTosino = new System.Windows.Forms.CheckBox();
+            this.chbPina = new System.Windows.Forms.CheckBox();
+            this.chbChamp = new System.Windows.Forms.CheckBox();
+            this.chbPep = new System.Windows.Forms.CheckBox();
             this.btnIngre = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.rdbIndividual = new System.Windows.Forms.RadioButton();
-            this.rdbMediano = new System.Windows.Forms.RadioButton();
             this.rdbGrande = new System.Windows.Forms.RadioButton();
+            this.rdbMediano = new System.Windows.Forms.RadioButton();
+            this.rdbIndividual = new System.Windows.Forms.RadioButton();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.rdbSarten = new System.Windows.Forms.RadioButton();
-            this.rdbQueso = new System.Windows.Forms.RadioButton();
             this.rdbItaliana = new System.Windows.Forms.RadioButton();
+            this.rdbQueso = new System.Windows.Forms.RadioButton();
+            this.rdbSarten = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCategorias)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -75,76 +75,72 @@ namespace ATM
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(19, 29);
-            this.lblNombre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblNombre.Location = new System.Drawing.Point(25, 36);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(135, 15);
+            this.lblNombre.Size = new System.Drawing.Size(154, 17);
             this.lblNombre.TabIndex = 0;
             this.lblNombre.Text = "Nombre del Propietario";
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(21, 64);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(2);
+            this.txtNombre.Location = new System.Drawing.Point(28, 79);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(274, 20);
+            this.txtNombre.Size = new System.Drawing.Size(364, 22);
             this.txtNombre.TabIndex = 1;
             this.txtNombre.Tag = "hola";
             // 
             // lblCuenta
             // 
             this.lblCuenta.AutoSize = true;
-            this.lblCuenta.Location = new System.Drawing.Point(19, 119);
-            this.lblCuenta.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblCuenta.Location = new System.Drawing.Point(25, 146);
             this.lblCuenta.Name = "lblCuenta";
-            this.lblCuenta.Size = new System.Drawing.Size(111, 15);
+            this.lblCuenta.Size = new System.Drawing.Size(127, 17);
             this.lblCuenta.TabIndex = 2;
             this.lblCuenta.Text = "Numero de Cuenta";
             // 
             // txtNumCuenta
             // 
-            this.txtNumCuenta.Location = new System.Drawing.Point(21, 153);
-            this.txtNumCuenta.Margin = new System.Windows.Forms.Padding(2);
+            this.txtNumCuenta.Location = new System.Drawing.Point(28, 188);
+            this.txtNumCuenta.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNumCuenta.MaxLength = 10;
             this.txtNumCuenta.Name = "txtNumCuenta";
-            this.txtNumCuenta.Size = new System.Drawing.Size(274, 20);
+            this.txtNumCuenta.Size = new System.Drawing.Size(364, 22);
             this.txtNumCuenta.TabIndex = 3;
             // 
             // lblSaldo
             // 
             this.lblSaldo.AutoSize = true;
-            this.lblSaldo.Location = new System.Drawing.Point(19, 213);
-            this.lblSaldo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSaldo.Location = new System.Drawing.Point(25, 262);
             this.lblSaldo.Name = "lblSaldo";
-            this.lblSaldo.Size = new System.Drawing.Size(104, 15);
+            this.lblSaldo.Size = new System.Drawing.Size(118, 17);
             this.lblSaldo.TabIndex = 4;
             this.lblSaldo.Text = "Saldo Disponible ";
             // 
             // txtSaldo
             // 
             this.txtSaldo.Enabled = false;
-            this.txtSaldo.Location = new System.Drawing.Point(21, 262);
-            this.txtSaldo.Margin = new System.Windows.Forms.Padding(2);
+            this.txtSaldo.Location = new System.Drawing.Point(28, 322);
+            this.txtSaldo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtSaldo.Name = "txtSaldo";
-            this.txtSaldo.Size = new System.Drawing.Size(274, 20);
+            this.txtSaldo.Size = new System.Drawing.Size(364, 22);
             this.txtSaldo.TabIndex = 5;
             // 
             // lblCantidad
             // 
             this.lblCantidad.AutoSize = true;
-            this.lblCantidad.Location = new System.Drawing.Point(23, 349);
-            this.lblCantidad.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblCantidad.Location = new System.Drawing.Point(31, 430);
             this.lblCantidad.Name = "lblCantidad";
-            this.lblCantidad.Size = new System.Drawing.Size(131, 15);
+            this.lblCantidad.Size = new System.Drawing.Size(151, 17);
             this.lblCantidad.TabIndex = 6;
             this.lblCantidad.Text = "Cantidad de operacion";
             // 
             // txtCantidad
             // 
-            this.txtCantidad.Location = new System.Drawing.Point(21, 392);
-            this.txtCantidad.Margin = new System.Windows.Forms.Padding(2);
+            this.txtCantidad.Location = new System.Drawing.Point(28, 482);
+            this.txtCantidad.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtCantidad.Name = "txtCantidad";
-            this.txtCantidad.Size = new System.Drawing.Size(274, 20);
+            this.txtCantidad.Size = new System.Drawing.Size(364, 22);
             this.txtCantidad.TabIndex = 7;
             this.txtCantidad.Tag = "";
             this.txtCantidad.Text = "Solo numeros";
@@ -155,10 +151,10 @@ namespace ATM
             // 
             // btnDesposito
             // 
-            this.btnDesposito.Location = new System.Drawing.Point(38, 453);
-            this.btnDesposito.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDesposito.Location = new System.Drawing.Point(51, 558);
+            this.btnDesposito.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDesposito.Name = "btnDesposito";
-            this.btnDesposito.Size = new System.Drawing.Size(75, 35);
+            this.btnDesposito.Size = new System.Drawing.Size(100, 43);
             this.btnDesposito.TabIndex = 8;
             this.btnDesposito.Text = "Deposito";
             this.btnDesposito.UseVisualStyleBackColor = true;
@@ -166,10 +162,10 @@ namespace ATM
             // 
             // btnRetiro
             // 
-            this.btnRetiro.Location = new System.Drawing.Point(128, 453);
-            this.btnRetiro.Margin = new System.Windows.Forms.Padding(2);
+            this.btnRetiro.Location = new System.Drawing.Point(171, 558);
+            this.btnRetiro.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnRetiro.Name = "btnRetiro";
-            this.btnRetiro.Size = new System.Drawing.Size(70, 35);
+            this.btnRetiro.Size = new System.Drawing.Size(93, 43);
             this.btnRetiro.TabIndex = 9;
             this.btnRetiro.Text = "Retiro";
             this.btnRetiro.UseVisualStyleBackColor = true;
@@ -177,10 +173,10 @@ namespace ATM
             // 
             // btnEstado
             // 
-            this.btnEstado.Location = new System.Drawing.Point(215, 457);
-            this.btnEstado.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEstado.Location = new System.Drawing.Point(287, 562);
+            this.btnEstado.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnEstado.Name = "btnEstado";
-            this.btnEstado.Size = new System.Drawing.Size(68, 32);
+            this.btnEstado.Size = new System.Drawing.Size(91, 39);
             this.btnEstado.TabIndex = 10;
             this.btnEstado.Text = "Estado";
             this.btnEstado.UseVisualStyleBackColor = true;
@@ -190,59 +186,57 @@ namespace ATM
             // 
             this.cmbCategorias.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCategorias.FormattingEnabled = true;
-            this.cmbCategorias.Location = new System.Drawing.Point(416, 64);
-            this.cmbCategorias.Margin = new System.Windows.Forms.Padding(2);
+            this.cmbCategorias.Location = new System.Drawing.Point(555, 79);
+            this.cmbCategorias.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbCategorias.Name = "cmbCategorias";
-            this.cmbCategorias.Size = new System.Drawing.Size(92, 21);
+            this.cmbCategorias.Size = new System.Drawing.Size(121, 24);
             this.cmbCategorias.TabIndex = 11;
             this.cmbCategorias.SelectedIndexChanged += new System.EventHandler(this.cmbCategorias_SelectedIndexChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(413, 93);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(551, 114);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(17, 15);
+            this.label1.Size = new System.Drawing.Size(19, 17);
             this.label1.TabIndex = 12;
             this.label1.Text = "Id";
             // 
             // txtId
             // 
-            this.txtId.Location = new System.Drawing.Point(416, 118);
-            this.txtId.Margin = new System.Windows.Forms.Padding(2);
+            this.txtId.Location = new System.Drawing.Point(555, 145);
+            this.txtId.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(76, 20);
+            this.txtId.Size = new System.Drawing.Size(100, 22);
             this.txtId.TabIndex = 13;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(413, 153);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(551, 188);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(60, 15);
+            this.label2.Size = new System.Drawing.Size(69, 17);
             this.label2.TabIndex = 14;
             this.label2.Text = "Categoria";
             // 
             // txtCategoria
             // 
-            this.txtCategoria.Location = new System.Drawing.Point(416, 178);
-            this.txtCategoria.Margin = new System.Windows.Forms.Padding(2);
+            this.txtCategoria.Location = new System.Drawing.Point(555, 219);
+            this.txtCategoria.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtCategoria.Name = "txtCategoria";
-            this.txtCategoria.Size = new System.Drawing.Size(76, 20);
+            this.txtCategoria.Size = new System.Drawing.Size(100, 22);
             this.txtCategoria.TabIndex = 15;
             // 
             // dgvCategorias
             // 
             this.dgvCategorias.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvCategorias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCategorias.Location = new System.Drawing.Point(416, 453);
-            this.dgvCategorias.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvCategorias.Location = new System.Drawing.Point(555, 527);
+            this.dgvCategorias.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvCategorias.Name = "dgvCategorias";
             this.dgvCategorias.RowHeadersWidth = 51;
             this.dgvCategorias.RowTemplate.Height = 24;
-            this.dgvCategorias.Size = new System.Drawing.Size(703, 302);
+            this.dgvCategorias.Size = new System.Drawing.Size(937, 283);
             this.dgvCategorias.TabIndex = 16;
             this.dgvCategorias.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCategorias_CellClick);
             this.dgvCategorias.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCategorias_CellEnter);
@@ -250,49 +244,55 @@ namespace ATM
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(419, 248);
+            this.label3.Location = new System.Drawing.Point(559, 305);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(52, 15);
+            this.label3.Size = new System.Drawing.Size(58, 17);
             this.label3.TabIndex = 17;
             this.label3.Text = "Nombre";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(419, 306);
+            this.label4.Location = new System.Drawing.Point(559, 377);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(46, 15);
+            this.label4.Size = new System.Drawing.Size(53, 17);
             this.label4.TabIndex = 18;
             this.label4.Text = "Cuenta";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(419, 360);
+            this.label5.Location = new System.Drawing.Point(559, 443);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(39, 15);
+            this.label5.Size = new System.Drawing.Size(44, 17);
             this.label5.TabIndex = 19;
             this.label5.Text = "Saldo";
             // 
             // txtCliente
             // 
-            this.txtCliente.Location = new System.Drawing.Point(422, 266);
+            this.txtCliente.Location = new System.Drawing.Point(563, 327);
+            this.txtCliente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtCliente.Name = "txtCliente";
-            this.txtCliente.Size = new System.Drawing.Size(277, 20);
+            this.txtCliente.Size = new System.Drawing.Size(368, 22);
             this.txtCliente.TabIndex = 20;
             // 
             // txtCuenta
             // 
-            this.txtCuenta.Location = new System.Drawing.Point(422, 324);
+            this.txtCuenta.Location = new System.Drawing.Point(563, 399);
+            this.txtCuenta.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtCuenta.Name = "txtCuenta";
-            this.txtCuenta.Size = new System.Drawing.Size(277, 20);
+            this.txtCuenta.Size = new System.Drawing.Size(368, 22);
             this.txtCuenta.TabIndex = 21;
             // 
             // txtSaldoG
             // 
-            this.txtSaldoG.Location = new System.Drawing.Point(422, 378);
+            this.txtSaldoG.Location = new System.Drawing.Point(563, 465);
+            this.txtSaldoG.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtSaldoG.Name = "txtSaldoG";
-            this.txtSaldoG.Size = new System.Drawing.Size(277, 20);
+            this.txtSaldoG.Size = new System.Drawing.Size(368, 22);
             this.txtSaldoG.TabIndex = 22;
             // 
             // groupBox1
@@ -301,58 +301,65 @@ namespace ATM
             this.groupBox1.Controls.Add(this.chbPina);
             this.groupBox1.Controls.Add(this.chbChamp);
             this.groupBox1.Controls.Add(this.chbPep);
-            this.groupBox1.Location = new System.Drawing.Point(656, 29);
+            this.groupBox1.Location = new System.Drawing.Point(875, 36);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(119, 128);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Size = new System.Drawing.Size(159, 158);
             this.groupBox1.TabIndex = 23;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Ingredientes";
             // 
-            // chbPep
-            // 
-            this.chbPep.AutoSize = true;
-            this.chbPep.Location = new System.Drawing.Point(6, 19);
-            this.chbPep.Name = "chbPep";
-            this.chbPep.Size = new System.Drawing.Size(79, 19);
-            this.chbPep.TabIndex = 0;
-            this.chbPep.Text = "Peperoni";
-            this.chbPep.UseVisualStyleBackColor = true;
-            // 
-            // chbChamp
-            // 
-            this.chbChamp.AutoSize = true;
-            this.chbChamp.Location = new System.Drawing.Point(6, 44);
-            this.chbChamp.Name = "chbChamp";
-            this.chbChamp.Size = new System.Drawing.Size(106, 19);
-            this.chbChamp.TabIndex = 1;
-            this.chbChamp.Text = "Champiñones";
-            this.chbChamp.UseVisualStyleBackColor = true;
-            // 
-            // chbPina
-            // 
-            this.chbPina.AutoSize = true;
-            this.chbPina.Location = new System.Drawing.Point(6, 69);
-            this.chbPina.Name = "chbPina";
-            this.chbPina.Size = new System.Drawing.Size(54, 19);
-            this.chbPina.TabIndex = 2;
-            this.chbPina.Text = "Piña";
-            this.chbPina.UseVisualStyleBackColor = true;
-            // 
             // chbTosino
             // 
             this.chbTosino.AutoSize = true;
-            this.chbTosino.Location = new System.Drawing.Point(6, 94);
+            this.chbTosino.Location = new System.Drawing.Point(8, 116);
+            this.chbTosino.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.chbTosino.Name = "chbTosino";
-            this.chbTosino.Size = new System.Drawing.Size(66, 19);
+            this.chbTosino.Size = new System.Drawing.Size(73, 21);
             this.chbTosino.TabIndex = 3;
             this.chbTosino.Text = "Tocino";
             this.chbTosino.UseVisualStyleBackColor = true;
             // 
+            // chbPina
+            // 
+            this.chbPina.AutoSize = true;
+            this.chbPina.Location = new System.Drawing.Point(8, 85);
+            this.chbPina.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chbPina.Name = "chbPina";
+            this.chbPina.Size = new System.Drawing.Size(58, 21);
+            this.chbPina.TabIndex = 2;
+            this.chbPina.Text = "Piña";
+            this.chbPina.UseVisualStyleBackColor = true;
+            // 
+            // chbChamp
+            // 
+            this.chbChamp.AutoSize = true;
+            this.chbChamp.Location = new System.Drawing.Point(8, 54);
+            this.chbChamp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chbChamp.Name = "chbChamp";
+            this.chbChamp.Size = new System.Drawing.Size(116, 21);
+            this.chbChamp.TabIndex = 1;
+            this.chbChamp.Text = "Champiñones";
+            this.chbChamp.UseVisualStyleBackColor = true;
+            // 
+            // chbPep
+            // 
+            this.chbPep.AutoSize = true;
+            this.chbPep.Location = new System.Drawing.Point(8, 23);
+            this.chbPep.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chbPep.Name = "chbPep";
+            this.chbPep.Size = new System.Drawing.Size(87, 21);
+            this.chbPep.TabIndex = 0;
+            this.chbPep.Text = "Peperoni";
+            this.chbPep.UseVisualStyleBackColor = true;
+            // 
             // btnIngre
             // 
-            this.btnIngre.Location = new System.Drawing.Point(752, 389);
+            this.btnIngre.Location = new System.Drawing.Point(1003, 479);
+            this.btnIngre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnIngre.Name = "btnIngre";
-            this.btnIngre.Size = new System.Drawing.Size(135, 23);
+            this.btnIngre.Size = new System.Drawing.Size(180, 28);
             this.btnIngre.TabIndex = 24;
             this.btnIngre.Text = "Ingredientes";
             this.btnIngre.UseVisualStyleBackColor = true;
@@ -363,96 +370,106 @@ namespace ATM
             this.groupBox2.Controls.Add(this.rdbGrande);
             this.groupBox2.Controls.Add(this.rdbMediano);
             this.groupBox2.Controls.Add(this.rdbIndividual);
-            this.groupBox2.Location = new System.Drawing.Point(814, 29);
+            this.groupBox2.Location = new System.Drawing.Point(1085, 36);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(101, 128);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Size = new System.Drawing.Size(135, 158);
             this.groupBox2.TabIndex = 25;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Tamaños";
             // 
-            // rdbIndividual
+            // rdbGrande
             // 
-            this.rdbIndividual.AutoSize = true;
-            this.rdbIndividual.Location = new System.Drawing.Point(6, 19);
-            this.rdbIndividual.Name = "rdbIndividual";
-            this.rdbIndividual.Size = new System.Drawing.Size(80, 19);
-            this.rdbIndividual.TabIndex = 0;
-            this.rdbIndividual.TabStop = true;
-            this.rdbIndividual.Text = "Individual";
-            this.rdbIndividual.UseVisualStyleBackColor = true;
+            this.rdbGrande.AutoSize = true;
+            this.rdbGrande.Location = new System.Drawing.Point(0, 84);
+            this.rdbGrande.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rdbGrande.Name = "rdbGrande";
+            this.rdbGrande.Size = new System.Drawing.Size(77, 21);
+            this.rdbGrande.TabIndex = 2;
+            this.rdbGrande.TabStop = true;
+            this.rdbGrande.Text = "Grande";
+            this.rdbGrande.UseVisualStyleBackColor = true;
             // 
             // rdbMediano
             // 
             this.rdbMediano.AutoSize = true;
-            this.rdbMediano.Location = new System.Drawing.Point(0, 44);
+            this.rdbMediano.Location = new System.Drawing.Point(0, 54);
+            this.rdbMediano.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rdbMediano.Name = "rdbMediano";
-            this.rdbMediano.Size = new System.Drawing.Size(77, 19);
+            this.rdbMediano.Size = new System.Drawing.Size(83, 21);
             this.rdbMediano.TabIndex = 1;
             this.rdbMediano.TabStop = true;
             this.rdbMediano.Text = "Mediana";
             this.rdbMediano.UseVisualStyleBackColor = true;
             // 
-            // rdbGrande
+            // rdbIndividual
             // 
-            this.rdbGrande.AutoSize = true;
-            this.rdbGrande.Location = new System.Drawing.Point(0, 68);
-            this.rdbGrande.Name = "rdbGrande";
-            this.rdbGrande.Size = new System.Drawing.Size(69, 19);
-            this.rdbGrande.TabIndex = 2;
-            this.rdbGrande.TabStop = true;
-            this.rdbGrande.Text = "Grande";
-            this.rdbGrande.UseVisualStyleBackColor = true;
+            this.rdbIndividual.AutoSize = true;
+            this.rdbIndividual.Location = new System.Drawing.Point(8, 23);
+            this.rdbIndividual.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rdbIndividual.Name = "rdbIndividual";
+            this.rdbIndividual.Size = new System.Drawing.Size(88, 21);
+            this.rdbIndividual.TabIndex = 0;
+            this.rdbIndividual.TabStop = true;
+            this.rdbIndividual.Text = "Individual";
+            this.rdbIndividual.UseVisualStyleBackColor = true;
             // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.rdbItaliana);
             this.groupBox3.Controls.Add(this.rdbQueso);
             this.groupBox3.Controls.Add(this.rdbSarten);
-            this.groupBox3.Location = new System.Drawing.Point(943, 34);
+            this.groupBox3.Location = new System.Drawing.Point(1257, 42);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(121, 123);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Size = new System.Drawing.Size(161, 151);
             this.groupBox3.TabIndex = 26;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Especialidad";
             // 
-            // rdbSarten
-            // 
-            this.rdbSarten.AutoSize = true;
-            this.rdbSarten.Location = new System.Drawing.Point(6, 19);
-            this.rdbSarten.Name = "rdbSarten";
-            this.rdbSarten.Size = new System.Drawing.Size(64, 19);
-            this.rdbSarten.TabIndex = 0;
-            this.rdbSarten.TabStop = true;
-            this.rdbSarten.Text = "Sarten";
-            this.rdbSarten.UseVisualStyleBackColor = true;
-            // 
-            // rdbQueso
-            // 
-            this.rdbQueso.AutoSize = true;
-            this.rdbQueso.Location = new System.Drawing.Point(6, 44);
-            this.rdbQueso.Name = "rdbQueso";
-            this.rdbQueso.Size = new System.Drawing.Size(111, 19);
-            this.rdbQueso.TabIndex = 1;
-            this.rdbQueso.TabStop = true;
-            this.rdbQueso.Text = "Orilla de queso";
-            this.rdbQueso.UseVisualStyleBackColor = true;
-            // 
             // rdbItaliana
             // 
             this.rdbItaliana.AutoSize = true;
-            this.rdbItaliana.Location = new System.Drawing.Point(6, 69);
+            this.rdbItaliana.Location = new System.Drawing.Point(8, 85);
+            this.rdbItaliana.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rdbItaliana.Name = "rdbItaliana";
-            this.rdbItaliana.Size = new System.Drawing.Size(68, 19);
+            this.rdbItaliana.Size = new System.Drawing.Size(74, 21);
             this.rdbItaliana.TabIndex = 2;
             this.rdbItaliana.TabStop = true;
             this.rdbItaliana.Text = "Italiana";
             this.rdbItaliana.UseVisualStyleBackColor = true;
             // 
+            // rdbQueso
+            // 
+            this.rdbQueso.AutoSize = true;
+            this.rdbQueso.Location = new System.Drawing.Point(8, 54);
+            this.rdbQueso.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rdbQueso.Name = "rdbQueso";
+            this.rdbQueso.Size = new System.Drawing.Size(125, 21);
+            this.rdbQueso.TabIndex = 1;
+            this.rdbQueso.TabStop = true;
+            this.rdbQueso.Text = "Orilla de queso";
+            this.rdbQueso.UseVisualStyleBackColor = true;
+            // 
+            // rdbSarten
+            // 
+            this.rdbSarten.AutoSize = true;
+            this.rdbSarten.Location = new System.Drawing.Point(8, 23);
+            this.rdbSarten.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rdbSarten.Name = "rdbSarten";
+            this.rdbSarten.Size = new System.Drawing.Size(71, 21);
+            this.rdbSarten.TabIndex = 0;
+            this.rdbSarten.TabStop = true;
+            this.rdbSarten.Text = "Sarten";
+            this.rdbSarten.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1141, 882);
+            this.ClientSize = new System.Drawing.Size(1521, 835);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.btnIngre);
@@ -480,7 +497,7 @@ namespace ATM
             this.Controls.Add(this.lblCuenta);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.lblNombre);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form1";
             this.Text = "Cajeto ATM 5A";
             this.Load += new System.EventHandler(this.Form1_Load);
