@@ -33,11 +33,13 @@ namespace ATM
             // 
             // frmCuentaEmpresa
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(399, 772);
+            this.ClientSize = new System.Drawing.Size(299, 627);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmCuentaEmpresa";
             this.Text = "frmCuentaEmpresa";
+            this.Load += new System.EventHandler(this.frmCuentaEmpresa_Load);
             this.ResumeLayout(false);
 
         }

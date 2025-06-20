@@ -16,5 +16,10 @@ namespace ATM
         {
             InitializeComponent();
         }
+
+        private void frmCuentaEmpresa_Load(object sender, EventArgs e)
+        {
+         
+        }
     }
 }

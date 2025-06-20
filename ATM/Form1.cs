@@ -26,6 +26,7 @@ namespace ATM
             this.txtNombre.Text = cuenta.Nombre;
             this.txtNumCuenta.Text = cuenta.NumCuenta;
             txtSaldo.Text = "$ " + cuenta.Saldo;
+            
 
             //trabajo con el combo
             //creo un arraylist de categorias
@@ -194,6 +195,11 @@ namespace ATM
                 lista += "* Champiñones";
 
             MessageBox.Show(lista);
+        }
+
+        private void dgvCategorias_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

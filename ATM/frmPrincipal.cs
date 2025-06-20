@@ -16,6 +16,7 @@ namespace ATM
         //de nuestro MDI
         private Form1 form1;
         private frmCuentaEmpresa empresa;
+        private frmCuentas cuentas;
         public frmPrincipal()
         {
             InitializeComponent();
@@ -53,6 +54,20 @@ namespace ATM
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void cuentasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if(cuentas==null || cuentas.IsDisposed)
+            {
+                cuentas = new frmCuentas();
+                cuentas.MdiParent = this;
+                cuentas.Show();
+            }
+            else
+            {
+                cuentas.BringToFront();
+            }
         }
     }
 }
