@@ -31,21 +31,124 @@ namespace ATM
             if (con != null)
             {
                 //creamos la consulta 
-                string consulta = "SELECT nombre,descripcion FROM categoria";
+                string consulta = "SELECT usuario.id, usuario.nombre, usuario.password, rol.nombre from"
+                    +" usuario, rol where usuario.rol_id = rol.id ORDER BY usuario.id ";
                 //creamos un adapter que es una especie de
                 //traductor para el datasource
                 MySqlDataAdapter adapter = new MySqlDataAdapter(consulta, con);
-                con.Close();
                 //creamos un datatable 
                 DataTable datos = new DataTable();
                 //cargamos al tadatable con el metodo fill del adapter
                 adapter.Fill(datos);
                 dgvData.DataSource = datos;
+                dgvData.Columns["id"].Visible = false;
+
+                //llenamos el combo
+                string consulta2 = "select * from rol";
+                MySqlDataAdapter adapter2 = new MySqlDataAdapter(consulta2, con);
+                con.Close();
+                DataTable data = new DataTable();
+                adapter2.Fill(data);
+                cmbRol.DataSource = data;
+                cmbRol.ValueMember = "id";
+                cmbRol.DisplayMember = "nombre";
             }
             else
             {
                 MessageBox.Show("No fue posible Conectar a la base de datos...");
             }
+        }
+
+        private void dgvData_CellEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow fila = dgvData.Rows[e.RowIndex];
+                txtNombre.Text = fila.Cells["nombre"].Value?.ToString();
+                //txtPassword.Text = fila.Cells["password"].Value?.ToString();
+                cmbRol.Text = fila.Cells["nombre1"].Value?.ToString();
+                lblid.Text = fila.Cells["id"].Value?.ToString();
+            }
+        }
+
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+            string nom = txtNombre.Text;
+            string pass = txtPassword.Text;
+            int rol = Convert.ToInt32(cmbRol.SelectedValue);
+
+            coneccion = new clsConeccion();
+            MySqlConnection con = coneccion.getConecction();
+            pass = BCrypt.Net.BCrypt.HashPassword(pass);
+            //creamos la consulta 
+            string consulta = "insert into usuario (nombre, password,rol_id)"+
+                "values (@nombre, @password, @rol_id)";
+            MySqlCommand command = new MySqlCommand(consulta, con);
+            command.Parameters.AddWithValue("@nombre", nom);
+            command.Parameters.AddWithValue("@password", pass);
+            command.Parameters.AddWithValue("@rol_id", rol);
+            int filasAfectadas=command.ExecuteNonQuery();
+
+            if (filasAfectadas > 0)
+            {
+                MessageBox.Show("Registro exitoso...");
+                loadData();
+            }
+            else
+            {
+                MessageBox.Show("Error al agregar nuevo registro...");
+            }
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            string nom = txtNombre.Text;
+            string pass = txtPassword.Text;
+            int rol = Convert.ToInt32(cmbRol.SelectedValue);
+            int id = Convert.ToInt32(lblid.Text);
+
+            string passHash = "";
+            if (!string.IsNullOrEmpty(pass))
+            {
+                passHash = BCrypt.Net.BCrypt.HashPassword(pass);
+            }
+            coneccion = new clsConeccion();
+            MySqlConnection con = coneccion.getConecction();
+
+            MySqlCommand command;
+            if (!string.IsNullOrEmpty(passHash))
+            {
+                //creamos la consulta
+                string consulta = "update usuario set nombre=@nombre, password=@password," +
+                    " rol_id=@rol_id where id=@id";
+                command = new MySqlCommand(consulta, con);
+                command.Parameters.AddWithValue("@password", passHash);
+            }
+            else
+            {
+                string consulta = "update usuario set nombre=@nombre, rol_id=@rol_id where id=@id";
+                command = new MySqlCommand(consulta, con);
+            }
+            command.Parameters.AddWithValue("@nombre", nom);
+            command.Parameters.AddWithValue("@rol_id", rol);
+            command.Parameters.AddWithValue("@id", id);
+            int filasafectadas = command.ExecuteNonQuery();
+            con.Close();
+            if (filasafectadas > 0)
+            {
+                MessageBox.Show("Actualizacion Correcta");
+                loadData();
+            }
+            else
+            {
+                MessageBox.Show("hay pex");
+            }
+
+
+
+
+
+
         }
     }
 }

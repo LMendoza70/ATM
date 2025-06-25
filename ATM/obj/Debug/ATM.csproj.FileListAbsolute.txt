@@ -44,3 +44,5 @@ D:\2025-2\Practicas\ATM\ATM\bin\Debug\System.Numerics.Vectors.xml
 D:\2025-2\Practicas\ATM\ATM\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 D:\2025-2\Practicas\ATM\ATM\bin\Debug\System.Threading.Tasks.Extensions.xml
 D:\2025-2\Practicas\ATM\ATM\obj\Debug\ATM.csproj.CopyComplete
+D:\2025-2\Practicas\ATM\ATM\bin\Debug\BCrypt.Net-Next.dll
+D:\2025-2\Practicas\ATM\ATM\bin\Debug\BCrypt.Net-Next.xml
