@@ -143,12 +143,47 @@ namespace ATM
             {
                 MessageBox.Show("hay pex");
             }
+        }
 
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            int id = Convert.ToInt32(lblid.Text);
 
+            coneccion = new clsConeccion();
+            MySqlConnection con = coneccion.getConecction();
 
+            try
+            {
+                string consulta = "delete from usuario where id=@id";
+                MySqlCommand command = new MySqlCommand(consulta, con);
+                command.Parameters.AddWithValue("@id", id);
+                int filasAfectadas = command.ExecuteNonQuery();
+                con.Close();
 
-
-
+                if (filasAfectadas > 0)
+                {
+                    MessageBox.Show("Registro eliminado Correctamente...");
+                    loadData();
+                }
+                else
+                {
+                    MessageBox.Show("No se elimino ningun registro");
+                }
+            }
+            catch(MySqlException ex)
+            {
+                if (ex.Number == 1451)
+                {
+                    MessageBox.Show("Imposible eliminar registro por que existen relaciones ligadas a el...");
+                }
+                else
+                {
+                    MessageBox.Show("Imposible Elimnar Registro " + ex.Number);
+                }
+                
+            }
+            
+            
         }
     }
 }
