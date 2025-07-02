@@ -14,6 +14,7 @@ namespace ATM
     public partial class frmCuentaEmpresa : Form
     {
         clsConeccion coneccion;
+        MySqlConnection con;
         public frmCuentaEmpresa()
         {
             InitializeComponent();
@@ -21,18 +22,21 @@ namespace ATM
 
         private void frmCuentaEmpresa_Load(object sender, EventArgs e)
         {
+            coneccion = new clsConeccion();
+            con = coneccion.getConecction();
+            con.Close();
             loadData();
         }
 
         private void loadData()
         {
-            coneccion = new clsConeccion();
-            MySqlConnection con = coneccion.getConecction();
+            con.Open();
             if (con != null)
             {
                 //creamos la consulta 
                 string consulta = "SELECT usuario.id, usuario.nombre, usuario.password, rol.nombre from"
                     +" usuario, rol where usuario.rol_id = rol.id ORDER BY usuario.id ";
+                string consulta3 = "select * from usuario";
                 //creamos un adapter que es una especie de
                 //traductor para el datasource
                 MySqlDataAdapter adapter = new MySqlDataAdapter(consulta, con);
@@ -77,8 +81,7 @@ namespace ATM
             string pass = txtPassword.Text;
             int rol = Convert.ToInt32(cmbRol.SelectedValue);
 
-            coneccion = new clsConeccion();
-            MySqlConnection con = coneccion.getConecction();
+            con.Open();
             pass = BCrypt.Net.BCrypt.HashPassword(pass);
             //creamos la consulta 
             string consulta = "insert into usuario (nombre, password,rol_id)"+
@@ -112,8 +115,7 @@ namespace ATM
             {
                 passHash = BCrypt.Net.BCrypt.HashPassword(pass);
             }
-            coneccion = new clsConeccion();
-            MySqlConnection con = coneccion.getConecction();
+            con.Open();
 
             MySqlCommand command;
             if (!string.IsNullOrEmpty(passHash))
@@ -148,9 +150,18 @@ namespace ATM
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             int id = Convert.ToInt32(lblid.Text);
+            string nombre = txtNombre.Text;
 
-            coneccion = new clsConeccion();
-            MySqlConnection con = coneccion.getConecction();
+            DialogResult result = MessageBox.Show("En realidad quieres eliminar al usuario : "+nombre,
+                "Eliminar",MessageBoxButtons.YesNo);
+
+            if (result == DialogResult.No)
+            {
+                return;
+            }
+
+
+            con.Open();
 
             try
             {
@@ -184,6 +195,26 @@ namespace ATM
             }
             
             
+        }
+
+        private void txtBusqueda_TextChanged(object sender, EventArgs e)
+        {
+            string criterio = txtBusqueda.Text;
+
+            con.Open();
+
+            string consulta = "SELECT usuario.id, usuario.nombre, usuario.password, rol.nombre from"
+                    + " usuario, rol where usuario.rol_id = rol.id and usuario.nombre like @criterio  ORDER BY usuario.id ";
+
+            MySqlCommand command = new MySqlCommand(consulta, con);
+            command.Parameters.AddWithValue("@criterio","%"+ criterio +"%");
+
+            MySqlDataAdapter adapter = new MySqlDataAdapter(command);
+            DataTable table = new DataTable();
+            adapter.Fill(table);
+            dgvData.DataSource = table;
+            dgvData.Columns["id"].Visible = false;
+            con.Close();
         }
     }
 }

@@ -17,9 +17,13 @@ namespace ATM
         private Form1 form1;
         private frmCuentaEmpresa empresa;
         private frmCuentas cuentas;
-        public frmPrincipal()
+        string user;
+        int rol;
+        public frmPrincipal(string usuario, int rolid)
         {
             InitializeComponent();
+            user = usuario;
+            rol = rolid;
         }
 
         private void tsmFrom1_Click(object sender, EventArgs e)
@@ -67,6 +71,16 @@ namespace ATM
             else
             {
                 cuentas.BringToFront();
+            }
+        }
+
+        private void frmPrincipal_Load(object sender, EventArgs e)
+        {
+            this.Text = "Welcome user : " + user+" Rol id : "+rol;
+
+            if (rol == 2)
+            {
+                tsmFrom1.Visible = false;
             }
         }
     }

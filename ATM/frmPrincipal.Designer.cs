@@ -31,10 +31,10 @@ namespace ATM
         {
             this.mesPrincipal = new System.Windows.Forms.MenuStrip();
             this.tsmTareas = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmFrom1 = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmEmpresa = new System.Windows.Forms.ToolStripMenuItem();
-            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmFrom1 = new System.Windows.Forms.ToolStripMenuItem();
             this.cuentasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mesPrincipal.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -45,8 +45,8 @@ namespace ATM
             this.tsmTareas});
             this.mesPrincipal.Location = new System.Drawing.Point(0, 0);
             this.mesPrincipal.Name = "mesPrincipal";
-            this.mesPrincipal.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.mesPrincipal.Size = new System.Drawing.Size(1031, 24);
+            this.mesPrincipal.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
+            this.mesPrincipal.Size = new System.Drawing.Size(1375, 28);
             this.mesPrincipal.TabIndex = 1;
             this.mesPrincipal.Text = "menuStrip1";
             // 
@@ -58,48 +58,49 @@ namespace ATM
             this.cuentasToolStripMenuItem,
             this.salirToolStripMenuItem});
             this.tsmTareas.Name = "tsmTareas";
-            this.tsmTareas.Size = new System.Drawing.Size(52, 20);
+            this.tsmTareas.Size = new System.Drawing.Size(64, 24);
             this.tsmTareas.Text = "Tareas";
-            // 
-            // tsmFrom1
-            // 
-            this.tsmFrom1.Name = "tsmFrom1";
-            this.tsmFrom1.Size = new System.Drawing.Size(180, 22);
-            this.tsmFrom1.Text = "Fromulario 1...";
-            this.tsmFrom1.Click += new System.EventHandler(this.tsmFrom1_Click);
             // 
             // tsmEmpresa
             // 
             this.tsmEmpresa.Name = "tsmEmpresa";
-            this.tsmEmpresa.Size = new System.Drawing.Size(180, 22);
+            this.tsmEmpresa.Size = new System.Drawing.Size(185, 26);
             this.tsmEmpresa.Text = "Empresa...";
             this.tsmEmpresa.Click += new System.EventHandler(this.tsmEmpresa_Click);
             // 
-            // salirToolStripMenuItem
+            // tsmFrom1
             // 
-            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.salirToolStripMenuItem.Text = "Salir";
-            this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
+            this.tsmFrom1.Name = "tsmFrom1";
+            this.tsmFrom1.Size = new System.Drawing.Size(185, 26);
+            this.tsmFrom1.Text = "Fromulario 1...";
+            this.tsmFrom1.Click += new System.EventHandler(this.tsmFrom1_Click);
             // 
             // cuentasToolStripMenuItem
             // 
             this.cuentasToolStripMenuItem.Name = "cuentasToolStripMenuItem";
-            this.cuentasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cuentasToolStripMenuItem.Size = new System.Drawing.Size(185, 26);
             this.cuentasToolStripMenuItem.Text = "Cuentas";
             this.cuentasToolStripMenuItem.Click += new System.EventHandler(this.cuentasToolStripMenuItem_Click);
             // 
+            // salirToolStripMenuItem
+            // 
+            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(185, 26);
+            this.salirToolStripMenuItem.Text = "Salir";
+            this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
+            // 
             // frmPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1031, 737);
+            this.ClientSize = new System.Drawing.Size(1375, 907);
             this.Controls.Add(this.mesPrincipal);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.mesPrincipal;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmPrincipal";
             this.Text = "frmPrincipal";
+            this.Load += new System.EventHandler(this.frmPrincipal_Load);
             this.mesPrincipal.ResumeLayout(false);
             this.mesPrincipal.PerformLayout();
             this.ResumeLayout(false);
